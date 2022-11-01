@@ -1,6 +1,6 @@
 {
   "name": "@timewalts/ngx-mat-intl-tel-input",
-  "version": "5.0.5",
+  "version": "5.0.6",
   "peerDependencies": {
     "@angular/common": ">=14.x",
     "@angular/core": ">=14.x",
