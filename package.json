@@ -1,6 +1,6 @@
 {
   "name": "@timewalts/ngx-mat-intl-tel-input",
-  "version": "5.0.2",
+  "version": "5.0.5",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,11 +10,11 @@
     "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build_lib": "ng build ngx-mat-intl-tel-input",
-    "npm_pack": "cd dist/ngx-mat-intl-tel-input && npm pack",
-    "package": "npm run build_lib && npm run copy-files && npm run npm_pack",
-    "copy-license": "cp ./LICENSE ./dist/ngx-mat-intl-tel-input",
-    "copy-readme": "cp ./README.md ./dist/ngx-mat-intl-tel-input",
+    "build_lib": "ng build --configuration production ngx-mat-intl-tel-input",
+    "npm_pack": "cd  .\\dist\\ngx-mat-intl-tel-input\\ && npm pack && npm publish --access public",
+    "package": "npm run build_lib && npm run npm_pack",
+    "copy-license": "copy ./LICENSE ./dist/ngx-mat-intl-tel-input",
+    "copy-readme": "copy ./README.md ./dist/ngx-mat-intl-tel-input",
     "copy-files": "npm run copy-license && npm run copy-readme"
   },
   "private": false,

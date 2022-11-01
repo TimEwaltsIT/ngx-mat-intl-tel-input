@@ -4,7 +4,8 @@
     <span class="country-selector-code" *ngIf="selectedCountry?.dialCode">+{{ selectedCountry.dialCode }}</span>
   </button>
   <mat-menu #menu="matMenu" class="ngx-mat-tel-input-mat-menu-panel" backdropClass="ngx-mat-tel-input-overlay-backdrop" overlayPanelClass="ngx-mat-tel-input-overlay-pane">
-    <input *ngIf="enableSearch" class="country-search" [(ngModel)]="searchCriteria" type="text" [placeholder]="searchPlaceholder" (click)="$event.stopPropagation()" />
+    <input #countrySearch *ngIf="enableSearch" class="country-search" (change)="countrySearch.focus()" [(ngModel)]="searchCriteria" type="text" [placeholder]="searchPlaceholder"
+      (click)="$event.stopPropagation()" />
     <button type="button" mat-menu-item class="country-list-button" *ngFor="let country of preferredCountriesInDropDown" (click)="onCountrySelect(country, focusable)">
       <div class="icon-wrapper">
         <div class="flag" [ngClass]="country.flagClass"></div>
